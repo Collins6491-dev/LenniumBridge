@@ -802,6 +802,58 @@
   </script>
 </section>
 
+<!-- Real-Time Transaction Feed Section
+<section class="relative">
+  <div id="transaction-feed" class="fixed right-2 bottom-6 w-80 bg-white shadow-xl rounded-lg p-4 z-50 border border-green-600">
+    <div id="transaction-message" class="text-sm text-gray-800 font-medium flex items-start gap-2 animate-slide-in">
+      <img id="user-image" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=40" class="w-10 h-10 rounded-full border object-cover">
+      <p id="user-text">Just now: <strong>Jane from UK</strong> invested $250 in Weekly Plan.</p>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slide-in {
+      0% { transform: translateX(100%); opacity: 0; }
+      10% { transform: translateX(0); opacity: 1; }
+      90% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(100%); opacity: 0; }
+    }
+
+    .animate-slide-in {
+      animation: slide-in 8s ease-in-out forwards;
+    }
+  </style>
+
+  <script>
+    const messages = [
+      { name: "Jane from UK", amount: 250, plan: "Weekly Plan", img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=40" },
+      { name: "Alex from Canada", amount: 500, plan: "Monthly Plan", img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&h=40" },
+      { name: "Liam from Australia", amount: 300, plan: "Bi-Weekly Plan", img: "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&h=40" },
+      { name: "Grace from Germany", amount: 120, plan: "Weekly Plan", img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=40" },
+      { name: "David from USA", amount: 1000, plan: "Monthly Plan", img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&h=40" }
+    ];
+
+    let currentIndex = 0;
+    const feed = document.getElementById('transaction-message');
+    const t = document.getElementById('user-text');
+    const image = document.getElementById('user-image');
+
+    function updateTransaction() {
+      const msg = messages[currentIndex];
+      text.innerHTML = `Just now: <strong>${msg.name}</strong> invested $${msg.amount} in ${msg.plan}.`;
+      image.src = msg.img;
+
+      feed.classList.remove('animate-slide-in');
+      void feed.offsetWidth; // reflow to restart animation
+      feed.classList.add('animate-slide-in');
+
+      currentIndex = (currentIndex + 1) % messages.length;
+    }
+
+    setInterval(updateTransaction, 8000);
+  </script>
+</section> -->
+
 
 <!-- Professional Footer Section -->
 <footer class="bg-gray-900 text-gray-300 py-12 px-6">
