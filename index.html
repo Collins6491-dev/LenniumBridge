@@ -824,34 +824,7 @@
     }
   </style>
 
-  <script>
-    const messages = [
-      { name: "Jane from UK", amount: 250, plan: "Weekly Plan", img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=40" },
-      { name: "Alex from Canada", amount: 500, plan: "Monthly Plan", img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&h=40" },
-      { name: "Liam from Australia", amount: 300, plan: "Bi-Weekly Plan", img: "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&h=40" },
-      { name: "Grace from Germany", amount: 120, plan: "Weekly Plan", img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=40" },
-      { name: "David from USA", amount: 1000, plan: "Monthly Plan", img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&h=40" }
-    ];
-
-    let currentIndex = 0;
-    const feed = document.getElementById('transaction-message');
-    const t = document.getElementById('user-text');
-    const image = document.getElementById('user-image');
-
-    function updateTransaction() {
-      const msg = messages[currentIndex];
-      text.innerHTML = `Just now: <strong>${msg.name}</strong> invested $${msg.amount} in ${msg.plan}.`;
-      image.src = msg.img;
-
-      feed.classList.remove('animate-slide-in');
-      void feed.offsetWidth; // reflow to restart animation
-      feed.classList.add('animate-slide-in');
-
-      currentIndex = (currentIndex + 1) % messages.length;
-    }
-
-    setInterval(updateTransaction, 8000);
-  </script>
+  
 </section>
 
 
